@@ -12,6 +12,7 @@
 		E1E92D391FDC61E70045CCAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E92D371FDC61E70045CCAA /* Main.storyboard */; };
 		E1E92D3B1FDC61E70045CCAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E92D3A1FDC61E70045CCAA /* Assets.xcassets */; };
 		E1E92D3E1FDC61E70045CCAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E92D3C1FDC61E70045CCAA /* LaunchScreen.storyboard */; };
+		E1E92D4B1FDC75760045CCAA /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E92D4A1FDC75760045CCAA /* NavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E1E92D3A1FDC61E70045CCAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1E92D3D1FDC61E70045CCAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1E92D3F1FDC61E70045CCAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1E92D4A1FDC75760045CCAA /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,55 @@
 		E1E92D321FDC61E70045CCAA /* APDemoApp */ = {
 			isa = PBXGroup;
 			children = (
-				E1E92D331FDC61E70045CCAA /* AppDelegate.swift */,
+				E1E92D481FDC6BAA0045CCAA /* Application Delegatel */,
 				E1E92D351FDC61E70045CCAA /* ViewController.swift */,
-				E1E92D371FDC61E70045CCAA /* Main.storyboard */,
-				E1E92D3A1FDC61E70045CCAA /* Assets.xcassets */,
-				E1E92D3C1FDC61E70045CCAA /* LaunchScreen.storyboard */,
-				E1E92D3F1FDC61E70045CCAA /* Info.plist */,
+				E1E92D451FDC69370045CCAA /* Storyboards */,
+				E1E92D491FDC75520045CCAA /* Extensions */,
+				E1E92D461FDC695D0045CCAA /* Resources */,
+				E1E92D471FDC69730045CCAA /* Supporting Files */,
 			);
 			path = APDemoApp;
+			sourceTree = "<group>";
+		};
+		E1E92D451FDC69370045CCAA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E1E92D371FDC61E70045CCAA /* Main.storyboard */,
+				E1E92D3C1FDC61E70045CCAA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E1E92D461FDC695D0045CCAA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E1E92D3A1FDC61E70045CCAA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E1E92D471FDC69730045CCAA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1E92D3F1FDC61E70045CCAA /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1E92D481FDC6BAA0045CCAA /* Application Delegatel */ = {
+			isa = PBXGroup;
+			children = (
+				E1E92D331FDC61E70045CCAA /* AppDelegate.swift */,
+			);
+			path = "Application Delegatel";
+			sourceTree = "<group>";
+		};
+		E1E92D491FDC75520045CCAA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1E92D4A1FDC75760045CCAA /* NavigationBar.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +181,7 @@
 			files = (
 				E1E92D361FDC61E70045CCAA /* ViewController.swift in Sources */,
 				E1E92D341FDC61E70045CCAA /* AppDelegate.swift in Sources */,
+				E1E92D4B1FDC75760045CCAA /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +321,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K24N6NL7FA;
-				INFOPLIST_FILE = APDemoApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/APDemoApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dennisv.APDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -293,7 +337,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K24N6NL7FA;
-				INFOPLIST_FILE = APDemoApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/APDemoApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dennisv.APDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
