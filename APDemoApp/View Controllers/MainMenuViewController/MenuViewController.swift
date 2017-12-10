@@ -30,14 +30,31 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-
+    
+    // MARK : - Properties
+    
+    @IBOutlet var chatView: UIView!
+    @IBOutlet var loginView: UIView!
+    @IBOutlet var animationView: UIView!
+    
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    title = "Coding Tasks"
         
+        title = "Coding Tasks"
+        
+        setupViews()
     }
-
-
+    
+    // MARK: - 
+    
+    func setupViews() {
+        chatView.layer.cornerRadius = 20
+        loginView.layer.cornerRadius = 20
+        animationView.layer.cornerRadius = 20
+    }
+    
+    
 }
 

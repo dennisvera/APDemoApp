@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E13E4F6F1FDD83C5009993F7 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13E4F6E1FDD83C5009993F7 /* UIImage.swift */; };
+		E13E4F711FDDB3FC009993F7 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13E4F701FDDB3FC009993F7 /* UITextField.swift */; };
+		E13E4F731FDDB6EB009993F7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13E4F721FDDB6EB009993F7 /* Colors.swift */; };
 		E1CA578F1FDCAD5900CB5E6F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA578E1FDCAD5900CB5E6F /* ChatViewController.swift */; };
 		E1CA57911FDCAD8600CB5E6F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA57901FDCAD8600CB5E6F /* LoginViewController.swift */; };
 		E1CA57961FDCADDA00CB5E6F /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA57951FDCADDA00CB5E6F /* AnimationViewController.swift */; };
@@ -15,10 +18,12 @@
 		E1E92D391FDC61E70045CCAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E92D371FDC61E70045CCAA /* Main.storyboard */; };
 		E1E92D3B1FDC61E70045CCAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E92D3A1FDC61E70045CCAA /* Assets.xcassets */; };
 		E1E92D3E1FDC61E70045CCAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E92D3C1FDC61E70045CCAA /* LaunchScreen.storyboard */; };
-		E1E92D4B1FDC75760045CCAA /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E92D4A1FDC75760045CCAA /* NavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E13E4F6E1FDD83C5009993F7 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		E13E4F701FDDB3FC009993F7 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		E13E4F721FDDB6EB009993F7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		E1CA578E1FDCAD5900CB5E6F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E1CA57901FDCAD8600CB5E6F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1CA57951FDCADDA00CB5E6F /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
@@ -29,7 +34,6 @@
 		E1E92D3A1FDC61E70045CCAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1E92D3D1FDC61E70045CCAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1E92D3F1FDC61E70045CCAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1E92D4A1FDC75760045CCAA /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +155,9 @@
 		E1E92D491FDC75520045CCAA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E1E92D4A1FDC75760045CCAA /* NavigationBar.swift */,
+				E13E4F6E1FDD83C5009993F7 /* UIImage.swift */,
+				E13E4F701FDDB3FC009993F7 /* UITextField.swift */,
+				E13E4F721FDDB6EB009993F7 /* Colors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -229,11 +235,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E92D361FDC61E70045CCAA /* MenuViewController.swift in Sources */,
+				E13E4F731FDDB6EB009993F7 /* Colors.swift in Sources */,
 				E1E92D341FDC61E70045CCAA /* AppDelegate.swift in Sources */,
 				E1CA578F1FDCAD5900CB5E6F /* ChatViewController.swift in Sources */,
+				E13E4F6F1FDD83C5009993F7 /* UIImage.swift in Sources */,
+				E13E4F711FDDB3FC009993F7 /* UITextField.swift in Sources */,
 				E1CA57961FDCADDA00CB5E6F /* AnimationViewController.swift in Sources */,
 				E1CA57911FDCAD8600CB5E6F /* LoginViewController.swift in Sources */,
-				E1E92D4B1FDC75760045CCAA /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

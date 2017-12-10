@@ -9,23 +9,41 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    // MARK: - Properties
+    
+    @IBOutlet var userNameTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var loginButton: UIButton!
+    
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    title = "Login"
         
+        title = "Login"
+        
+        setUpViews()
     }
     
+    // MARK: -
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setUpViews() {
+        userNameTextField.setRoundedBorder()
+        passwordTextField.setRoundedBorder()
+        
+        loginButton.layer.cornerRadius = 20
     }
-    */
-
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
