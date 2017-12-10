@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1CA578F1FDCAD5900CB5E6F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA578E1FDCAD5900CB5E6F /* ChatViewController.swift */; };
+		E1CA57911FDCAD8600CB5E6F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA57901FDCAD8600CB5E6F /* LoginViewController.swift */; };
+		E1CA57961FDCADDA00CB5E6F /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA57951FDCADDA00CB5E6F /* AnimationViewController.swift */; };
 		E1E92D341FDC61E70045CCAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E92D331FDC61E70045CCAA /* AppDelegate.swift */; };
-		E1E92D361FDC61E70045CCAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E92D351FDC61E70045CCAA /* ViewController.swift */; };
+		E1E92D361FDC61E70045CCAA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E92D351FDC61E70045CCAA /* MenuViewController.swift */; };
 		E1E92D391FDC61E70045CCAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E92D371FDC61E70045CCAA /* Main.storyboard */; };
 		E1E92D3B1FDC61E70045CCAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E92D3A1FDC61E70045CCAA /* Assets.xcassets */; };
 		E1E92D3E1FDC61E70045CCAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E92D3C1FDC61E70045CCAA /* LaunchScreen.storyboard */; };
@@ -16,9 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E1CA578E1FDCAD5900CB5E6F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		E1CA57901FDCAD8600CB5E6F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E1CA57951FDCADDA00CB5E6F /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		E1E92D301FDC61E70045CCAA /* APDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E92D331FDC61E70045CCAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E1E92D351FDC61E70045CCAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E1E92D351FDC61E70045CCAA /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		E1E92D381FDC61E70045CCAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1E92D3A1FDC61E70045CCAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1E92D3D1FDC61E70045CCAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +43,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1CA578D1FDCAD2D00CB5E6F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1CA57941FDCADB400CB5E6F /* MainMenuViewController */,
+				E1CA57931FDCAD9D00CB5E6F /* ChatViewController */,
+				E1CA57921FDCAD8B00CB5E6F /* LoginViewController */,
+				E1CA57971FDCADE000CB5E6F /* AnimationViewController */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E1CA57921FDCAD8B00CB5E6F /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E1CA57901FDCAD8600CB5E6F /* LoginViewController.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		E1CA57931FDCAD9D00CB5E6F /* ChatViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E1CA578E1FDCAD5900CB5E6F /* ChatViewController.swift */,
+			);
+			path = ChatViewController;
+			sourceTree = "<group>";
+		};
+		E1CA57941FDCADB400CB5E6F /* MainMenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E1E92D351FDC61E70045CCAA /* MenuViewController.swift */,
+			);
+			path = MainMenuViewController;
+			sourceTree = "<group>";
+		};
+		E1CA57971FDCADE000CB5E6F /* AnimationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E1CA57951FDCADDA00CB5E6F /* AnimationViewController.swift */,
+			);
+			path = AnimationViewController;
+			sourceTree = "<group>";
+		};
 		E1E92D271FDC61E70045CCAA = {
 			isa = PBXGroup;
 			children = (
@@ -56,8 +105,8 @@
 		E1E92D321FDC61E70045CCAA /* APDemoApp */ = {
 			isa = PBXGroup;
 			children = (
-				E1E92D481FDC6BAA0045CCAA /* Application Delegatel */,
-				E1E92D351FDC61E70045CCAA /* ViewController.swift */,
+				E1E92D481FDC6BAA0045CCAA /* Application Delegate */,
+				E1CA578D1FDCAD2D00CB5E6F /* View Controllers */,
 				E1E92D451FDC69370045CCAA /* Storyboards */,
 				E1E92D491FDC75520045CCAA /* Extensions */,
 				E1E92D461FDC695D0045CCAA /* Resources */,
@@ -91,12 +140,12 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E1E92D481FDC6BAA0045CCAA /* Application Delegatel */ = {
+		E1E92D481FDC6BAA0045CCAA /* Application Delegate */ = {
 			isa = PBXGroup;
 			children = (
 				E1E92D331FDC61E70045CCAA /* AppDelegate.swift */,
 			);
-			path = "Application Delegatel";
+			path = "Application Delegate";
 			sourceTree = "<group>";
 		};
 		E1E92D491FDC75520045CCAA /* Extensions */ = {
@@ -179,8 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E92D361FDC61E70045CCAA /* ViewController.swift in Sources */,
+				E1E92D361FDC61E70045CCAA /* MenuViewController.swift in Sources */,
 				E1E92D341FDC61E70045CCAA /* AppDelegate.swift in Sources */,
+				E1CA578F1FDCAD5900CB5E6F /* ChatViewController.swift in Sources */,
+				E1CA57961FDCADDA00CB5E6F /* AnimationViewController.swift in Sources */,
+				E1CA57911FDCAD8600CB5E6F /* LoginViewController.swift in Sources */,
 				E1E92D4B1FDC75760045CCAA /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
