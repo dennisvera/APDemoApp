@@ -10,11 +10,23 @@ import UIKit
 
 class AnimationViewController: UIViewController {
 
+    // MARK: - Properties
+    
+    @IBOutlet var logoImageView: UIImageView!
+    @IBOutlet var spinButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     title = "Animation"
         
+        setUpViews()
+    }
+    
+    // MARK: -
+    
+    func setUpViews() {
+        spinButton.layer.cornerRadius = 20
     }
     
 

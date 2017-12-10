@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -160,7 +161,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="59"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ccd-Yp-YVF" id="zNl-jp-xCN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="58.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncx-PQ-0NA">
@@ -296,13 +297,44 @@
                     <view key="view" contentMode="scaleToFill" id="VhV-wu-Xdq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="f2f-PX-NdZ">
+                                <rect key="frame" x="117" y="263" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="f2f-PX-NdZ" secondAttribute="height" multiplier="1:1" id="QoX-8x-4pg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBv-R8-SbW">
+                                <rect key="frame" x="56" y="543" width="263" height="48"/>
+                                <color key="backgroundColor" red="0.2627450980392157" green="0.45490196078431372" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="gCc-EM-1JQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Spin">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KR6-Hf-irV" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zBv-R8-SbW" secondAttribute="bottom" constant="76" id="08U-wr-7sd"/>
+                            <constraint firstItem="zBv-R8-SbW" firstAttribute="leading" secondItem="KR6-Hf-irV" secondAttribute="leading" constant="56" id="Nyt-tM-RLZ"/>
+                            <constraint firstItem="f2f-PX-NdZ" firstAttribute="centerY" secondItem="VhV-wu-Xdq" secondAttribute="centerY" id="Ovi-yI-kgr"/>
+                            <constraint firstItem="f2f-PX-NdZ" firstAttribute="centerX" secondItem="VhV-wu-Xdq" secondAttribute="centerX" id="tpu-Lt-qVy"/>
+                            <constraint firstItem="KR6-Hf-irV" firstAttribute="trailing" secondItem="zBv-R8-SbW" secondAttribute="trailing" constant="56" id="uBp-PP-CB7"/>
+                            <constraint firstItem="zBv-R8-SbW" firstAttribute="top" secondItem="f2f-PX-NdZ" secondAttribute="bottom" constant="140" id="wXL-Gz-Top"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="KR6-Hf-irV"/>
                     </view>
+                    <connections>
+                        <outlet property="logoImageView" destination="f2f-PX-NdZ" id="eFd-L7-6KJ"/>
+                        <outlet property="spinButton" destination="zBv-R8-SbW" id="B8t-qP-z7x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVB-Ur-Lyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="937" y="791"/>
+            <point key="canvasLocation" x="936.79999999999995" y="790.25487256371821"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qQG-J4-fmS">
@@ -334,6 +366,7 @@
         <image name="ic_animation" width="26" height="26"/>
         <image name="ic_chat" width="26" height="26"/>
         <image name="ic_login" width="17" height="26"/>
+        <image name="ic_logo" width="140" height="132"/>
         <image name="img_login" width="375" height="297"/>
     </resources>
 </document>
