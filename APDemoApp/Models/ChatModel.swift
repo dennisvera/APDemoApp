@@ -7,14 +7,17 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-struct AppPartnerData: Decodable {
-    let data: [User]
-}
+// MARK: - APPPartner Data JSON Keys
 
 struct User: Decodable {
     let user_id: String
     let username: String
     let avatar_url: String
     let message: String
+}
+
+struct Chat {
+    let chat: JSON
 }

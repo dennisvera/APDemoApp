@@ -7,28 +7,32 @@
 //
 
 import UIKit
+import SwiftyJSON
+
+// MARK: - Requesting Data
 
 class ChatClient {
     
-    func getChatData() {
+    func getChatData(with completionHandler: @escaping (Chat) -> ()) {
         
         let jsonUrlString = "http://dev3.apppartner.com/AppPartnerDeveloperTest/scripts/chat_log.php"
         
-        guard let url = URL(string: jsonUrlString) else { return }
+        let session = URLSession.shared
+        guard let url = URL(string: jsonUrlString) else {return}
         
-        URLSession.shared.dataTask(with: url) { (data, response, err) in
-            
-            guard let data = data else { return }
-            
-            do {
-                let appPartnerData = try JSONDecoder().decode(AppPartnerData.self, from: data)
-                print(appPartnerData)
+        let dataTask = session.dataTask(with: url, completionHandler: { data, response, err -> Void in
+            if let jsonData = data {
+                let json = JSON(data: jsonData)
+                let chatData = json["data"]
                 
-            } catch let jsonErr {
-                print("Error serializing json:", jsonErr)
+                let chat = Chat(chat: chatData)
+                completionHandler(chat)
+                
+            } else {
+                print("no data received: \(String(describing: err))")
             }
-            
-            }.resume()
+        })
+        
+        dataTask.resume()
     }
-    
 }

@@ -17,7 +17,9 @@ class ChatViewController: UIViewController {
         
         title = "Chat"
         
-        chatClient.getChatData()
+        chatClient.getChatData { (chat) in
+            print(chat)
+        }
         
         }
     }
