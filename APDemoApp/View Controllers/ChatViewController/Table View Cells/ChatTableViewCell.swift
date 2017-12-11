@@ -16,6 +16,9 @@ class ChatTableViewCell: UITableViewCell {
     
     // MARK: - Properties
 
+    @IBOutlet var userNameLabel: UILabel!
+    @IBOutlet var messageLabel: UILabel!
+    @IBOutlet var avatarImageView: UIImageView!
     
     // MARK: - Initialization
     

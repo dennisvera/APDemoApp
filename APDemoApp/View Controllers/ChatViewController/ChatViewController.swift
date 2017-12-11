@@ -10,14 +10,17 @@ import UIKit
 
 class ChatViewController: UIViewController {
     
+    let chatClient = ChatClient()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Chat"
         
+        chatClient.getChatData()
+        
+        }
     }
-    
-}
 
 extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     

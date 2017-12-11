@@ -37,7 +37,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="s8Y-Y2-CWE" kind="show" identifier="SegueChatView" id="dJd-AI-FP1"/>
+                                            <segue destination="s8Y-Y2-CWE" kind="show" id="ca4-9c-A5x"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -199,6 +199,11 @@
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HB1-sm-bAW" secondAttribute="bottom" constant="7" id="ske-ba-ejk"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarImageView" destination="Xgk-Cx-ruj" id="zYn-Tu-12S"/>
+                                            <outlet property="messageLabel" destination="HB1-sm-bAW" id="xHs-6k-7u6"/>
+                                            <outlet property="userNameLabel" destination="Ncx-PQ-0NA" id="fW1-Bf-rRA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -219,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMx-b9-F8I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-567.20000000000005" y="789.35532233883066"/>
+            <point key="canvasLocation" x="-567" y="790"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="A0k-0B-DmS">

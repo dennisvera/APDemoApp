@@ -10,8 +10,9 @@
 		E13E4F6F1FDD83C5009993F7 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13E4F6E1FDD83C5009993F7 /* UIImage.swift */; };
 		E13E4F711FDDB3FC009993F7 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13E4F701FDDB3FC009993F7 /* UITextField.swift */; };
 		E13E4F731FDDB6EB009993F7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13E4F721FDDB6EB009993F7 /* Colors.swift */; };
-		E13E4F781FDDE60C009993F7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13E4F771FDDE60C009993F7 /* DataManager.swift */; };
+		E13E4F781FDDE60C009993F7 /* ChatClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13E4F771FDDE60C009993F7 /* ChatClient.swift */; };
 		E13E4F7B1FDDE7FB009993F7 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13E4F7A1FDDE7FB009993F7 /* ChatTableViewCell.swift */; };
+		E16A31271FDE18AF00264352 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16A31261FDE18AF00264352 /* ChatModel.swift */; };
 		E1CA578F1FDCAD5900CB5E6F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA578E1FDCAD5900CB5E6F /* ChatViewController.swift */; };
 		E1CA57911FDCAD8600CB5E6F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA57901FDCAD8600CB5E6F /* LoginViewController.swift */; };
 		E1CA57961FDCADDA00CB5E6F /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA57951FDCADDA00CB5E6F /* AnimationViewController.swift */; };
@@ -26,8 +27,9 @@
 		E13E4F6E1FDD83C5009993F7 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		E13E4F701FDDB3FC009993F7 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		E13E4F721FDDB6EB009993F7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		E13E4F771FDDE60C009993F7 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		E13E4F771FDDE60C009993F7 /* ChatClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatClient.swift; sourceTree = "<group>"; };
 		E13E4F7A1FDDE7FB009993F7 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		E16A31261FDE18AF00264352 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		E1CA578E1FDCAD5900CB5E6F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E1CA57901FDCAD8600CB5E6F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1CA57951FDCADDA00CB5E6F /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +56,7 @@
 		E13E4F761FDDE4AA009993F7 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				E13E4F771FDDE60C009993F7 /* DataManager.swift */,
+				E13E4F771FDDE60C009993F7 /* ChatClient.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -65,6 +67,14 @@
 				E13E4F7A1FDDE7FB009993F7 /* ChatTableViewCell.swift */,
 			);
 			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		E16A31251FDE188E00264352 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E16A31261FDE18AF00264352 /* ChatModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E1CA578D1FDCAD2D00CB5E6F /* View Controllers */ = {
@@ -132,6 +142,7 @@
 			children = (
 				E1E92D481FDC6BAA0045CCAA /* Application Delegate */,
 				E13E4F761FDDE4AA009993F7 /* Network */,
+				E16A31251FDE188E00264352 /* Models */,
 				E1CA578D1FDCAD2D00CB5E6F /* View Controllers */,
 				E1E92D451FDC69370045CCAA /* Storyboards */,
 				E1E92D491FDC75520045CCAA /* Extensions */,
@@ -258,13 +269,14 @@
 			files = (
 				E1E92D361FDC61E70045CCAA /* MenuViewController.swift in Sources */,
 				E13E4F731FDDB6EB009993F7 /* Colors.swift in Sources */,
+				E16A31271FDE18AF00264352 /* ChatModel.swift in Sources */,
 				E1E92D341FDC61E70045CCAA /* AppDelegate.swift in Sources */,
 				E1CA578F1FDCAD5900CB5E6F /* ChatViewController.swift in Sources */,
 				E13E4F6F1FDD83C5009993F7 /* UIImage.swift in Sources */,
 				E13E4F711FDDB3FC009993F7 /* UITextField.swift in Sources */,
 				E1CA57961FDCADDA00CB5E6F /* AnimationViewController.swift in Sources */,
 				E13E4F7B1FDDE7FB009993F7 /* ChatTableViewCell.swift in Sources */,
-				E13E4F781FDDE60C009993F7 /* DataManager.swift in Sources */,
+				E13E4F781FDDE60C009993F7 /* ChatClient.swift in Sources */,
 				E1CA57911FDCAD8600CB5E6F /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
