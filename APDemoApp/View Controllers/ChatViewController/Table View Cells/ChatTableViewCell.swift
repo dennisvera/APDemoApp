@@ -20,6 +20,15 @@ class ChatTableViewCell: UITableViewCell {
     @IBOutlet var messageLabel: UILabel!
     @IBOutlet var avatarImageView: UIImageView!
     
+    
+    // MARK: - Reuse cell reset
+
+    override func prepareForReuse() {
+        userNameLabel.text = ""
+        messageLabel.text = ""
+        avatarImageView.image = nil
+    }
+    
     // MARK: - Initialization
     
     override func awakeFromNib() {

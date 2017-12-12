@@ -13,7 +13,9 @@ class ChatViewController: UIViewController {
     // MARK: - Properties
     
     let dataStore = ChatDataStore.sharedInstance
-
+    
+    @IBOutlet var tableView: UITableView!
+    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
@@ -21,18 +23,21 @@ class ChatViewController: UIViewController {
         
         title = "Chat"
         
+        getChatData()
+    }
+    
+    // MARK: - Fetch ChatData & update UI
+    
+    func getChatData() {
+        
         dataStore.fetchChat { (succes) in
             if succes {
-                print("We made it")
+                DispatchQueue.main.async {
+                    self.tableView?.reloadData()
+                }
             }
         }
     }
-    
-    // MARK: - Retrieve Chat data and update UI
-    
-//    func getChatData() {
-//
-//    }
     
 }
 
@@ -45,11 +50,15 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return dataStore.chats.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ChatTableViewCell.reuseIdentifier, for: indexPath) as! ChatTableViewCell
+        
+        let chat = dataStore.chats[indexPath.row]
+        cell.userNameLabel.text = chat.userName
+        cell.messageLabel.text = chat.message
         
         return cell
     }

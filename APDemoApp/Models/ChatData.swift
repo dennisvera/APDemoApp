@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Chat {
+class ChatData {
     
     let userName: String
     let message: String
@@ -19,6 +19,7 @@ class Chat {
         message = jsonDictionary["message"] as? String ?? "No Message"
         avatarUrl = jsonDictionary["avatar_url"] as? String ?? "No Avatar"
     }
+    
 }
 
 

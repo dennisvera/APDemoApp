@@ -14,7 +14,7 @@ class ChatDataStore {
     
     static let sharedInstance = ChatDataStore()
     typealias JSON = [[String : Any]]
-    var chats = [Chat]()
+    var chats = [ChatData]()
     
     //MARK: - Fetch ChatAPI Data
     
@@ -25,7 +25,7 @@ class ChatDataStore {
             guard let chatData = json["data"] as? JSON else { return }
             
             for chat in chatData {
-                if let chat = Chat.init(jsonDictionary: chat) {
+                if let chat = ChatData.init(jsonDictionary: chat) {
                     self.chats.append(chat)
                 }
             }
