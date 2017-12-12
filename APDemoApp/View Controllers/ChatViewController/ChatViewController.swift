@@ -10,19 +10,31 @@ import UIKit
 
 class ChatViewController: UIViewController {
     
-    let chatClient = ChatClient()
+    // MARK: - Properties
+    
+    let dataStore = ChatDataStore.sharedInstance
+
+    // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Chat"
         
-        chatClient.getChatData { (chat) in
-            print(chat)
-        }
-        
+        dataStore.fetchChat { (succes) in
+            if succes {
+                print("We made it")
+            }
         }
     }
+    
+    // MARK: - Retrieve Chat data and update UI
+    
+//    func getChatData() {
+//
+//    }
+    
+}
 
 extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     

@@ -6,18 +6,22 @@
 //  Copyright © 2017 Dennis Vera. All rights reserved.
 //
 
-import Foundation
-import SwiftyJSON
+import UIKit
 
-// MARK: - APPPartner Data JSON Keys
-
-struct User: Decodable {
-    let user_id: String
-    let username: String
-    let avatar_url: String
+class Chat {
+    
+    let userName: String
     let message: String
+    let avatarUrl: String
+    
+    init?(jsonDictionary: [String: Any]) {
+        userName = jsonDictionary["username"] as? String ?? "No Name"
+        message = jsonDictionary["message"] as? String ?? "No Message"
+        avatarUrl = jsonDictionary["avatar_url"] as? String ?? "No Avatar"
+    }
 }
 
-struct Chat {
-    let chat: JSON
-}
+
+
+
+
