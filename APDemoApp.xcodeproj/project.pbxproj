@@ -82,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				E13E4F771FDDE60C009993F7 /* ChatClient.swift */,
-				E1A3D8F71FE04B67002C6455 /* ChatDataStore.swift */,
 			);
 			path = "Network Manager";
 			sourceTree = "<group>";
@@ -101,6 +100,14 @@
 				E16A31261FDE18AF00264352 /* ChatData.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E1A3D9091FE17071002C6455 /* Data Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E1A3D8F71FE04B67002C6455 /* ChatDataStore.swift */,
+			);
+			path = "Data Managers";
 			sourceTree = "<group>";
 		};
 		E1CA578D1FDCAD2D00CB5E6F /* View Controllers */ = {
@@ -170,6 +177,7 @@
 			children = (
 				E1E92D481FDC6BAA0045CCAA /* Application Delegate */,
 				E13E4F761FDDE4AA009993F7 /* Network Manager */,
+				E1A3D9091FE17071002C6455 /* Data Managers */,
 				E16A31251FDE188E00264352 /* Models */,
 				E1CA578D1FDCAD2D00CB5E6F /* View Controllers */,
 				E1E92D451FDC69370045CCAA /* Storyboards */,

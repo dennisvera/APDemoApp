@@ -157,11 +157,11 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="59" id="Ccd-Yp-YVF" customClass="ChatTableViewCell" customModule="APDemoApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="59"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="64" id="Ccd-Yp-YVF" customClass="ChatTableViewCell" customModule="APDemoApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ccd-Yp-YVF" id="zNl-jp-xCN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="58.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncx-PQ-0NA">
@@ -193,11 +193,11 @@
                                                 <constraint firstAttribute="trailing" secondItem="Ncx-PQ-0NA" secondAttribute="trailing" constant="8" id="BZh-Ka-J4o"/>
                                                 <constraint firstItem="HB1-sm-bAW" firstAttribute="leading" secondItem="Xgk-Cx-ruj" secondAttribute="trailing" constant="8" id="Mqh-Tq-xNm"/>
                                                 <constraint firstItem="Ncx-PQ-0NA" firstAttribute="leading" secondItem="Xgk-Cx-ruj" secondAttribute="trailing" constant="8" id="TEM-Mp-Z7d"/>
+                                                <constraint firstAttribute="bottom" secondItem="HB1-sm-bAW" secondAttribute="bottom" constant="12" id="dOE-vg-Wsu"/>
                                                 <constraint firstItem="Xgk-Cx-ruj" firstAttribute="leading" secondItem="zNl-jp-xCN" secondAttribute="leading" constant="8" id="duK-Ep-yf5"/>
                                                 <constraint firstItem="Xgk-Cx-ruj" firstAttribute="top" secondItem="zNl-jp-xCN" secondAttribute="top" constant="8" id="eel-eI-rek"/>
                                                 <constraint firstAttribute="trailing" secondItem="HB1-sm-bAW" secondAttribute="trailing" constant="8" id="iIJ-QO-beQ"/>
                                                 <constraint firstItem="Ncx-PQ-0NA" firstAttribute="top" secondItem="zNl-jp-xCN" secondAttribute="top" constant="8" id="k5L-d0-VZs"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HB1-sm-bAW" secondAttribute="bottom" constant="7" id="ske-ba-ejk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -228,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMx-b9-F8I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-567" y="790"/>
+            <point key="canvasLocation" x="-567.20000000000005" y="789.35532233883066"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="A0k-0B-DmS">

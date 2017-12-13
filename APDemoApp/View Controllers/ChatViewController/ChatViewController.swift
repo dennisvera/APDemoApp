@@ -13,6 +13,7 @@ class ChatViewController: UIViewController {
     // MARK: - Properties
     
     let dataStore = ChatDataStore.sharedInstance
+    let cellSpacingHeight: CGFloat = 25
     
     @IBOutlet var tableView: UITableView!
     
@@ -66,6 +67,7 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
 
         return cell
     }
+
 }
 
 
