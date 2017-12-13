@@ -12,9 +12,10 @@ import UIKit
 
 extension UIImageView {
     
-    func setRoundedImage() {
+    func setRounded() {
         self.layoutSubviews()
-        self.layer.cornerRadius = self.frame.height / 2
+        let radius = self.frame.size.width / 2
+        self.layer.cornerRadius = radius
         self.clipsToBounds = true
         self.layer.masksToBounds = true
     }

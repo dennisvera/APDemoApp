@@ -6,7 +6,7 @@ target 'APDemoApp' do
   use_frameworks!
 
   # Pods for APDemoApp
-    pod 'SwiftyJSON'
+    pod 'SDWebImage', '~> 4.0'
 
 
 end

@@ -12,8 +12,9 @@ class ChatDataStore {
     
     // MARK: - Properties
     
-    static let sharedInstance = ChatDataStore()
     typealias JSON = [[String : Any]]
+
+    static let sharedInstance = ChatDataStore()
     var chats = [ChatData]()
     
     //MARK: - Fetch ChatAPI Data

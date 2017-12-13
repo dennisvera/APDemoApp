@@ -43,7 +43,7 @@ class ChatViewController: UIViewController {
 
 extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     
-    // MARK: - Table View Data Source Methods
+    // MARK: - TableView DatasSource Methods
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -60,6 +60,14 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
         cell.userNameLabel.text = chat.userName
         cell.messageLabel.text = chat.message
         
+        let imageView = cell.viewWithTag(1) as? UIImageView
+        imageView?.setRounded()
+        imageView?.sd_setImage(with: URL(string: chat.avatarUrl))
+
         return cell
     }
 }
+
+
+
+
