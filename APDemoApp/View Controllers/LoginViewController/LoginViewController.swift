@@ -86,14 +86,8 @@ class LoginViewController: UIViewController {
     // MARK: - AlertAction MenuViewController segue
     
     func okHandler(alert: UIAlertAction!) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: "HomeStoryboardID") as! MenuViewController
-        self.navigationController?.pushViewController(viewController, animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }
 
-
-//let alertController = UIAlertController(title: "Success", message: "API call took: ", preferredStyle: .alert)
-//alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//self.present(alertController, animated: true, completion: nil)
 
