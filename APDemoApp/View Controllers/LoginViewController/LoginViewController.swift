@@ -62,18 +62,19 @@ class LoginViewController: UIViewController {
             
             if (responseString.contains("Incorrect")) {
                 DispatchQueue.main.async {
-                    let alertController = UIAlertController(title: "Try Again", message: "Incorrect Username or Password", preferredStyle: UIAlertControllerStyle.alert)
-                    alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    let alertController = UIAlertController(title: "Try Again", message: "Incorrect Username or Password", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(alertController, animated: true, completion: nil)
                     
                     self.userNameTextField.text = ""
                     self.passwordTextField.text = ""
                 }
+                
             } else {
                 
                 DispatchQueue.main.async {
-                    let alertController = UIAlertController(title: "Success", message: "API call took: ", preferredStyle: UIAlertControllerStyle.alert)
-                    alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    let alertController = UIAlertController(title: "Success", message: "API call took: ", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: self.okHandler))
                     self.present(alertController, animated: true, completion: nil)
                 }
             }
@@ -81,7 +82,18 @@ class LoginViewController: UIViewController {
         
         task.resume()
     }
+    
+    // MARK: - AlertAction MenuViewController segue
+    
+    func okHandler(alert: UIAlertAction!) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "HomeStoryboardID") as! MenuViewController
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 
+//let alertController = UIAlertController(title: "Success", message: "API call took: ", preferredStyle: .alert)
+//alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//self.present(alertController, animated: true, completion: nil)
 
