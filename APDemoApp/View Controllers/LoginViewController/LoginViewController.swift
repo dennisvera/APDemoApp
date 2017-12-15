@@ -52,6 +52,10 @@ class LoginViewController: UIViewController {
         let postString = "username=\(userName)&password=\(password)"
         request.httpBody = postString.data(using: .utf8)
         
+        //MARK: - API Time execution Start
+        let methodStart = Date()
+        
+        //MARK: -Task request
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
             guard let data = data else { fatalError("Unable to get data: \(String(describing: error?.localizedDescription))") }
@@ -63,6 +67,8 @@ class LoginViewController: UIViewController {
             print("responseString = \(String(describing: responseString))")
             
             if (responseString.contains("Incorrect")) {
+                
+                //MARK: - Alert API Call Failed
                 DispatchQueue.main.async {
                     let alertController = UIAlertController(title: "Try Again", message: "Incorrect Username or Password", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -75,7 +81,12 @@ class LoginViewController: UIViewController {
             } else {
                 
                 DispatchQueue.main.async {
-                    let alertController = UIAlertController(title: "Success", message: "API call took: ", preferredStyle: .alert)
+                    //MARK: - API Time execution finish
+                    let methodFinish = Date()
+                    let executionTime = methodFinish.timeIntervalSince(methodStart)
+                    
+                    //MARK: - Alert API Call Successs
+                    let alertController = UIAlertController(title: "Success", message: "API call took: \(executionTime)", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: self.okHandler))
                     self.present(alertController, animated: true, completion: nil)
                 }
@@ -84,7 +95,7 @@ class LoginViewController: UIViewController {
         
         task.resume()
     }
-    
+    add .
     // MARK: - AlertController Helper
     
     func okHandler(alert: UIAlertAction!) {
