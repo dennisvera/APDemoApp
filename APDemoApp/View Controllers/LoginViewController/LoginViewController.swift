@@ -51,32 +51,30 @@ class LoginViewController: UIViewController {
         request.httpBody = postString.data(using: .utf8)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-
-             guard let data = data else { fatalError("Unable to get data: \(String(describing: error?.localizedDescription))") }
+            
+            guard let data = data else { fatalError("Unable to get data: \(String(describing: error?.localizedDescription))") }
             
             let httpStatus = response as? HTTPURLResponse
-            print("statusCode should be 200, but is: \(httpStatus!.statusCode)")
-            print("response = \(String(describing: response))")
-            print(postString)
+            print("Status Code: \(httpStatus!.statusCode)")
             
-            let responseString = String(data: data, encoding: .utf8)
+            guard let responseString = String(data: data, encoding: .utf8) else { return }
             print("responseString = \(String(describing: responseString))")
             
-            if (responseString?.contains("Incorrect"))! {
+            if (responseString.contains("Incorrect")) {
                 DispatchQueue.main.async {
-                    print("incorrect - try again")
-                    let alert = UIAlertController(title: "Try Again", message: "\(String(describing: responseString))", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
+                    let alertController = UIAlertController(title: "Try Again", message: "Incorrect Username or Password", preferredStyle: UIAlertControllerStyle.alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                    self.userNameTextField.text = ""
+                    self.passwordTextField.text = ""
                 }
-                
             } else {
                 
                 DispatchQueue.main.async {
-                    print("incorrect - try again")
-                    let alert = UIAlertController(title: "Success", message: "Username or Password Incorrect", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
+                    let alertController = UIAlertController(title: "Success", message: "API call took: ", preferredStyle: UIAlertControllerStyle.alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
                 }
             }
         }
