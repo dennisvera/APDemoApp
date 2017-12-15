@@ -31,6 +31,7 @@ class LoginViewController: UIViewController {
     func setUpViews() {
         userNameTextField.setRoundedBorder()
         passwordTextField.setRoundedBorder()
+        
         loginButton.layer.cornerRadius = 20
     }
     
@@ -39,67 +40,50 @@ class LoginViewController: UIViewController {
         guard let userName = userNameTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         
-        //declare parameter as a dictionary which contains string as key and value combination. considering inputs are valid
+        let urlString = "http://dev3.apppartner.com/AppPartnerDeveloperTest/scripts/login.php"
         
-        let parameters = ["username": userName, "password": password]
+        guard let url = URL(string: urlString) else { fatalError("Invalid URL") }
         
-        //create the url with URL
-        guard let url = URL(string: "http://dev3.apppartner.com/AppPartnerDeveloperTest/scripts/login.php") else {return}
-        
-        //create the session object
-        let session = URLSession.shared
-        
-        //now create the URLRequest object using the url object
         var request = URLRequest(url: url)
-        request.httpMethod = "POST" //set http method as POST
+        request.httpMethod = "POST"
         
-        do {
-            request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted) // pass dictionary to nsdata object and set it as request body
-        } catch let error {
-            print(error.localizedDescription)
-        }
+        let postString = "username=\(userName)&password=\(password)"
+        request.httpBody = postString.data(using: .utf8)
         
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        
-        //create dataTask using the session object to send data to the server
-        let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+
+             guard let data = data else { fatalError("Unable to get data: \(String(describing: error?.localizedDescription))") }
             
-            guard error == nil else {
-                return
-            }
+            let httpStatus = response as? HTTPURLResponse
+            print("statusCode should be 200, but is: \(httpStatus!.statusCode)")
+            print("response = \(String(describing: response))")
+            print(postString)
             
-            guard let data = data else {
-                return
-            }
+            let responseString = String(data: data, encoding: .utf8)
+            print("responseString = \(String(describing: responseString))")
             
-            do {
-                //create json object from data
-                if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
-                    print(json)
-                    // handle json...
+            if (responseString?.contains("Incorrect"))! {
+                DispatchQueue.main.async {
+                    print("incorrect - try again")
+                    let alert = UIAlertController(title: "Try Again", message: "\(String(describing: responseString))", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 }
-            } catch let error {
-                print(error.localizedDescription)
+                
+            } else {
+                
+                DispatchQueue.main.async {
+                    print("incorrect - try again")
+                    let alert = UIAlertController(title: "Success", message: "Username or Password Incorrect", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
             }
-        })
+        }
         
         task.resume()
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
