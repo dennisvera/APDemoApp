@@ -35,6 +35,8 @@ class LoginViewController: UIViewController {
         loginButton.layer.cornerRadius = 20
     }
     
+    // MARK: - Actions
+    
     @IBAction func didPressLoginButton(_ sender: Any) {
         
         guard let userName = userNameTextField.text else { return }
@@ -83,7 +85,7 @@ class LoginViewController: UIViewController {
         task.resume()
     }
     
-    // MARK: - AlertAction MenuViewController segue
+    // MARK: - AlertController Helper
     
     func okHandler(alert: UIAlertAction!) {
         self.navigationController?.popToRootViewController(animated: true)

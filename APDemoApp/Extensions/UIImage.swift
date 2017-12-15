@@ -8,8 +8,6 @@
 
 import UIKit
 
-// MARK: - UIImageView Round Edges
-
 extension UIImageView {
     
     func setRounded() {

@@ -15,7 +15,7 @@
 		E13E4F7B1FDDE7FB009993F7 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13E4F7A1FDDE7FB009993F7 /* ChatTableViewCell.swift */; };
 		E16A31271FDE18AF00264352 /* ChatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16A31261FDE18AF00264352 /* ChatData.swift */; };
 		E1A3D8F81FE04B67002C6455 /* ChatDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3D8F71FE04B67002C6455 /* ChatDataStore.swift */; };
-		E1A3D90B1FE19773002C6455 /* LoginClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3D90A1FE19773002C6455 /* LoginClient.swift */; };
+		E1A3D90D1FE43E4A002C6455 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3D90C1FE43E4A002C6455 /* UIView.swift */; };
 		E1CA578F1FDCAD5900CB5E6F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA578E1FDCAD5900CB5E6F /* ChatViewController.swift */; };
 		E1CA57911FDCAD8600CB5E6F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA57901FDCAD8600CB5E6F /* LoginViewController.swift */; };
 		E1CA57961FDCADDA00CB5E6F /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CA57951FDCADDA00CB5E6F /* AnimationViewController.swift */; };
@@ -38,7 +38,7 @@
 		E1A3D8F71FE04B67002C6455 /* ChatDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDataStore.swift; sourceTree = "<group>"; };
 		E1A3D9011FE0A71D002C6455 /* APDemoApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "APDemoApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		E1A3D9041FE0A869002C6455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1A3D90A1FE19773002C6455 /* LoginClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClient.swift; sourceTree = "<group>"; };
+		E1A3D90C1FE43E4A002C6455 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		E1CA578E1FDCAD5900CB5E6F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E1CA57901FDCAD8600CB5E6F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1CA57951FDCADDA00CB5E6F /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
@@ -84,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				E13E4F771FDDE60C009993F7 /* ChatClient.swift */,
-				E1A3D90A1FE19773002C6455 /* LoginClient.swift */,
 			);
 			path = "Network Manager";
 			sourceTree = "<group>";
@@ -231,6 +230,7 @@
 				E13E4F6E1FDD83C5009993F7 /* UIImage.swift */,
 				E13E4F701FDDB3FC009993F7 /* UITextField.swift */,
 				E13E4F721FDDB6EB009993F7 /* Colors.swift */,
+				E1A3D90C1FE43E4A002C6455 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -365,8 +365,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1A3D90D1FE43E4A002C6455 /* UIView.swift in Sources */,
 				E1E92D361FDC61E70045CCAA /* MenuViewController.swift in Sources */,
-				E1A3D90B1FE19773002C6455 /* LoginClient.swift in Sources */,
 				E13E4F731FDDB6EB009993F7 /* Colors.swift in Sources */,
 				E1A3D8F81FE04B67002C6455 /* ChatDataStore.swift in Sources */,
 				E16A31271FDE18AF00264352 /* ChatData.swift in Sources */,

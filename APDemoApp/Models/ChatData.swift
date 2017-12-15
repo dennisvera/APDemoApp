@@ -10,10 +10,12 @@ import UIKit
 
 class ChatData {
     
+    // MARK: - Properties
+    
     let userName: String
     let message: String
     let avatarUrl: String
-    
+        
     init?(jsonDictionary: [String: Any]) {
         userName = jsonDictionary["username"] as? String ?? "No Name"
         message = jsonDictionary["message"] as? String ?? "No Message"

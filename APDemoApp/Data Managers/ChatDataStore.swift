@@ -17,8 +17,8 @@ class ChatDataStore {
     static let sharedInstance = ChatDataStore()
     var chats = [ChatData]()
     
-    //MARK: - Fetch ChatAPI Data
-    
+    // MARK: - Requesting & Parsing Data
+
     func fetchChat(completionHandler: @escaping (Bool) -> ()) {
         
         ChatClient.fetchChatData { (json) in

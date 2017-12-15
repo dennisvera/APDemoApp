@@ -21,7 +21,7 @@ class ChatTableViewCell: UITableViewCell {
     @IBOutlet var avatarImageView: UIImageView!
     
     
-    // MARK: - Reuse cell reset
+    // MARK: - Reset reuse-cells
 
     override func prepareForReuse() {
         userNameLabel.text = ""

@@ -14,8 +14,8 @@ class ChatClient {
     
     typealias JSON = [String : Any]
     
-    //MARK: - Fetch ChatAPI Data
-    
+    // MARK: - Requesting Data
+
     class func fetchChatData(completionHandler: @escaping (JSON) -> ()) {
         
         let urlString = "http://dev3.apppartner.com/AppPartnerDeveloperTest/scripts/chat_log.php"
