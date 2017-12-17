@@ -68,7 +68,7 @@ class LoginViewController: UIViewController {
             
             if (responseString.contains("Incorrect")) {
                 
-                //MARK: - Alert API Call Failed
+                //MARK: - AlertController Failed
                 DispatchQueue.main.async {
                     let alertController = UIAlertController(title: "Try Again", message: "Incorrect Username or Password", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -85,7 +85,7 @@ class LoginViewController: UIViewController {
                     let methodFinish = Date()
                     let executionTime = methodFinish.timeIntervalSince(methodStart)
                     
-                    //MARK: - Alert API Call Successs
+                    //MARK: - AlertController Successs
                     let alertController = UIAlertController(title: "Success", message: "API call took: \(executionTime)", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: self.okHandler))
                     self.present(alertController, animated: true, completion: nil)
@@ -95,7 +95,7 @@ class LoginViewController: UIViewController {
         
         task.resume()
     }
-    add .
+
     // MARK: - AlertController Helper
     
     func okHandler(alert: UIAlertAction!) {
