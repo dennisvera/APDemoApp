@@ -79,7 +79,6 @@ class LoginViewController: UIViewController {
                 }
                 
             } else {
-                
                 DispatchQueue.main.async {
                     //MARK: - API Time execution finish
                     let methodFinish = Date()
