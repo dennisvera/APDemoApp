@@ -22,6 +22,6 @@ extension UIView {
             rotateAnimation.delegate = delegate
         }
         self.layer.add(rotateAnimation, forKey: nil)
+        
     }
-    
 }

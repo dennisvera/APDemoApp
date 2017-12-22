@@ -37,7 +37,6 @@ class ChatClient {
         
         dataTask.resume()
     }
-    
 }
 
 

@@ -15,8 +15,8 @@ extension UITextField {
         self.layer.cornerRadius = 6.0
         self.layer.borderColor = UIColor.loginLabelColor.cgColor
         self.layer.masksToBounds = true
+        
     }
-    
 }
 
 
