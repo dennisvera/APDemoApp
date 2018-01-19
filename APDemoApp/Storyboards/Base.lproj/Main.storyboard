@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eD9-9W-jFf">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,14 +14,14 @@
             <objects>
                 <viewController storyboardIdentifier="HomeStoryboardID" id="BYZ-38-t0r" customClass="MenuViewController" customModule="APDemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_home_menu" translatesAutoresizingMaskIntoConstraints="NO" id="lmu-IX-YJ7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ys4-My-hps" userLabel="Chat">
-                                <rect key="frame" x="56" y="208" width="263" height="56"/>
+                                <rect key="frame" x="56" y="208" width="302" height="56"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_chat" translatesAutoresizingMaskIntoConstraints="NO" id="mo5-xV-5XZ">
                                         <rect key="frame" x="24" y="15" width="26" height="26"/>
@@ -30,7 +30,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYV-I5-OSC">
-                                        <rect key="frame" x="82" y="0.0" width="181" height="56"/>
+                                        <rect key="frame" x="82" y="0.0" width="220" height="56"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Chat">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -52,7 +52,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbM-7o-0op" userLabel="Login">
-                                <rect key="frame" x="56" y="288" width="263" height="56"/>
+                                <rect key="frame" x="56" y="288" width="302" height="56"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_login" translatesAutoresizingMaskIntoConstraints="NO" id="bh7-BJ-m37">
                                         <rect key="frame" x="24" y="15" width="26" height="26"/>
@@ -61,7 +61,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1I-5v-uAS">
-                                        <rect key="frame" x="82" y="0.0" width="181" height="56"/>
+                                        <rect key="frame" x="82" y="0.0" width="220" height="56"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -83,7 +83,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5jH-Rt-ght" userLabel="Animation">
-                                <rect key="frame" x="56" y="368" width="263" height="56"/>
+                                <rect key="frame" x="56" y="368" width="302" height="56"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_animation" translatesAutoresizingMaskIntoConstraints="NO" id="njB-7N-IJG">
                                         <rect key="frame" x="24" y="15" width="26" height="26"/>
@@ -92,7 +92,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwU-VR-smn">
-                                        <rect key="frame" x="82" y="0.0" width="181" height="56"/>
+                                        <rect key="frame" x="82" y="0.0" width="220" height="56"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Animation">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -149,22 +149,22 @@
             <objects>
                 <viewController id="s8Y-Y2-CWE" customClass="ChatViewController" customModule="APDemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jaz-vw-cSQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mvM-0o-X9r">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="64" id="Ccd-Yp-YVF" customClass="ChatTableViewCell" customModule="APDemoApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="64"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ccd-Yp-YVF" id="zNl-jp-xCN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="63.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncx-PQ-0NA">
-                                                    <rect key="frame" x="56" y="8" width="311" height="19.5"/>
+                                                    <rect key="frame" x="56" y="8.0000000000000018" width="350" height="19.666666666666671"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="19.5" id="hCV-TL-tGW"/>
                                                     </constraints>
@@ -173,7 +173,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HB1-sm-bAW">
-                                                    <rect key="frame" x="56" y="31.5" width="311" height="20"/>
+                                                    <rect key="frame" x="56" y="31.666666666666671" width="350" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -234,11 +234,11 @@
             <objects>
                 <viewController id="0vA-Bs-B4N" customClass="LoginViewController" customModule="APDemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kgb-XB-0Yd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="    username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="10R-NY-k4o">
-                                <rect key="frame" x="56" y="112" width="263" height="48"/>
+                                <rect key="frame" x="56" y="112" width="302" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="UkN-NI-hI1"/>
                                 </constraints>
@@ -247,7 +247,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="    password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g1V-l1-4yb">
-                                <rect key="frame" x="56" y="186" width="263" height="48"/>
+                                <rect key="frame" x="56" y="186" width="302" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="hGL-85-FiM"/>
                                 </constraints>
@@ -256,7 +256,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zgm-5A-3T5">
-                                <rect key="frame" x="56" y="274" width="263" height="48"/>
+                                <rect key="frame" x="56" y="274" width="302" height="48"/>
                                 <color key="backgroundColor" red="0.94117647058823528" green="0.47058823529411764" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="jG5-yu-lT1"/>
@@ -270,7 +270,8 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_login" translatesAutoresizingMaskIntoConstraints="NO" id="gzd-Zu-w6M">
-                                <rect key="frame" x="0.0" y="370" width="375" height="297"/>
+                                <rect key="frame" x="0.0" y="370" width="414" height="366"/>
+                                <variation key="heightClass=compact-widthClass=compact" hidden="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -280,7 +281,10 @@
                             <constraint firstItem="gzd-Zu-w6M" firstAttribute="top" secondItem="Zgm-5A-3T5" secondAttribute="bottom" constant="48" id="5as-al-JFX"/>
                             <constraint firstItem="Zgm-5A-3T5" firstAttribute="leading" secondItem="gq4-dw-KoM" secondAttribute="leading" constant="56" id="6x8-bb-376"/>
                             <constraint firstItem="gq4-dw-KoM" firstAttribute="trailing" secondItem="10R-NY-k4o" secondAttribute="trailing" constant="56" id="9nA-bc-AIm"/>
-                            <constraint firstItem="10R-NY-k4o" firstAttribute="top" secondItem="gq4-dw-KoM" secondAttribute="top" constant="48" id="GSl-WB-JBi"/>
+                            <constraint firstItem="10R-NY-k4o" firstAttribute="top" secondItem="gq4-dw-KoM" secondAttribute="top" constant="48" id="GSl-WB-JBi">
+                                <variation key="heightClass=compact-widthClass=compact" constant="60"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="20"/>
+                            </constraint>
                             <constraint firstItem="gzd-Zu-w6M" firstAttribute="bottom" secondItem="gq4-dw-KoM" secondAttribute="bottom" id="PTg-Vo-fRe"/>
                             <constraint firstItem="gzd-Zu-w6M" firstAttribute="trailing" secondItem="gq4-dw-KoM" secondAttribute="trailing" id="a6c-e7-3Xh"/>
                             <constraint firstItem="10R-NY-k4o" firstAttribute="leading" secondItem="gq4-dw-KoM" secondAttribute="leading" constant="56" id="b7j-nV-fJT"/>
@@ -306,11 +310,11 @@
             <objects>
                 <viewController id="qce-Ej-2LI" customClass="AnimationViewController" customModule="APDemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VhV-wu-Xdq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBv-R8-SbW">
-                                <rect key="frame" x="56" y="539" width="263" height="48"/>
+                                <rect key="frame" x="56" y="608" width="302" height="48"/>
                                 <color key="backgroundColor" red="0.2627450980392157" green="0.45490196078431372" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="gCc-EM-1JQ"/>
@@ -324,7 +328,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="f2f-PX-NdZ">
-                                <rect key="frame" x="147.5" y="293.5" width="80" height="80"/>
+                                <rect key="frame" x="167" y="328" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="O3H-gd-FOm">
                                         <variation key="widthClass=compact" constant="80"/>
@@ -347,6 +351,7 @@
                             <constraint firstItem="KR6-Hf-irV" firstAttribute="trailing" secondItem="zBv-R8-SbW" secondAttribute="trailing" constant="56" id="uBp-PP-CB7"/>
                             <constraint firstItem="KR6-Hf-irV" firstAttribute="bottom" secondItem="zBv-R8-SbW" secondAttribute="bottom" constant="80" id="xiZ-mN-8cn">
                                 <variation key="heightClass=compact-widthClass=compact" constant="20"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="60"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="160"/>
                             </constraint>
                         </constraints>
@@ -367,7 +372,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eD9-9W-jFf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wII-ek-fdc">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.0" green="0.68235294117647061" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
